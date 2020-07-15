@@ -1,0 +1,59 @@
+<ion-content>
+  <my-header></my-header>
+  <div class="title-box">
+    <my-title [title]="title"></my-title>
+  </div>
+  <ion-row
+    class="info ion-margin-top ion-no-padding ion-margin-bottom ion-padding-bottom"
+  >
+    <ion-col size="12" class="ion-margin-bottom ion-padding-bottom">
+      <p>
+        You can have an <b>immediate chat</b> right now with our
+        <b>Specialist</b> or you can <b>wait to be contacted by us</b> in a
+        short time. Thank you!
+      </p>
+    </ion-col>
+
+    <ion-col class="ion-padding border-full" size="12" sizeMd="6">
+      <h6 class="bold">Name</h6>
+      <p>{{contactService.contract.name }}</p>
+    </ion-col>
+    <ion-col
+      class="ion-padding  border-h border-right sm-no-border-top sm-border-left"
+      size="12"
+      sizeMd="6"
+    >
+      <h6 class="bold">Email</h6>
+      <p>{{contactService.contract.email }}</p>
+    </ion-col>
+    <ion-col
+      class="ion-padding  border-v sm-border-bottom"
+      size="12"
+      sizeMd="6"
+    >
+      <h6 class="bold">Telephone</h6>
+      <p>{{contactService.contract.phone }}</p>
+    </ion-col>
+
+    <ion-col
+      class="ion-padding border-right sm-border-left"
+      size="12"
+      sizeMd="6"
+    >
+      <h6 class="bold">Description</h6>
+      <p>{{contactService.contract.project }}</p>
+    </ion-col>
+    <ion-col class="ion-padding border-full" size="12">
+      <h6 class="bold">Quantity</h6>
+      <p>{{contactService.contract.quantity }}</p>
+    </ion-col>
+  </ion-row>
+
+  <my-capabilities></my-capabilities>
+
+  <my-partners></my-partners>
+
+  <my-footer></my-footer>
+
+  <my-chat #chat></my-chat>
+</ion-content>

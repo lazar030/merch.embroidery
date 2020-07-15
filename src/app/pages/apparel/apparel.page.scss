@@ -1,0 +1,16 @@
+ion-content {
+  --padding-top: 60px;
+
+  .info {
+    max-width: 800px;
+    margin: 0 auto;
+
+    .link {
+      color: #e3686f;
+    }
+
+    p {
+      font-size: 18px;
+    }
+  }
+}

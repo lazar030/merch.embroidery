@@ -1,0 +1,196 @@
+<ion-content>
+  <my-header></my-header>
+  <carousel
+    [itemsPerSlide]="itemsPerSlide"
+    [singleSlideOffset]="singleSlideOffset"
+    [interval]="3000"
+    [showIndicators]="false"
+  >
+    <slide *ngFor="let slide of slides; let index=index">
+      <img
+        [src]="slide.image"
+        alt="image slide"
+        style="display: block; width: 100%;"
+      />
+    </slide>
+  </carousel>
+
+  <div class="title-box">
+    <my-title [title]="title"></my-title>
+  </div>
+  <ion-row
+    class="info ion-margin-top ion-no-padding ion-margin-bottom ion-padding-bottom"
+  >
+    <ion-col size="12" class="ion-margin-bottom ion-padding-bottom">
+      <p>
+        <b>Arena Embroidery</b> has an extensive selection of high-quality
+        apparel to meet your project’s needs and budget. And yes, we can
+        embroider the apparel you supply to us as well.
+        <b>Live Chat Now with an Arena Specialist</b> to discuss your project
+        and determine which brands are the best fit for you.
+      </p>
+    </ion-col>
+    <ion-col
+      size="12"
+      class="ion-text-center ion-margin-bottom ion-padding-bottom"
+    >
+      <ion-button
+        [routerLink]="['/estimate']"
+        size="large"
+        class="ion-text-center text-normal"
+        >Estimate Your Project</ion-button
+      >
+    </ion-col>
+    <ion-col class="ion-text-center" size="12">
+      <p>
+        <ion-icon src="../../../assets/icons/Cloud.svg"></ion-icon>
+        Use our
+        <span
+          ><a href="javascript:;" (click)="openChat(chat)">Live Chat now</a>
+        </span>
+        to speak to a Sewing Specialist
+      </p>
+
+      <div class="divider"></div>
+
+      <p class="ion-margin-top">
+        <ion-icon src="../../../assets/icons/tel.svg"></ion-icon>
+        Or call us today at
+        <span
+          ><a href="tel:(855) 462-7362">(855) 462-7362</a> or
+          <a href="tel:tel:(855) 462-7362">(855) GO ARENA</a></span
+        >
+      </p>
+    </ion-col>
+  </ion-row>
+
+  <div class="divider"></div>
+
+  <ion-row
+    class="info ion-margin-top ion-no-padding ion-margin-bottom ion-padding-bottom"
+  >
+    <ion-col size="12" class="ion-margin-bottom ion-padding-bottom">
+      <h4 class="ion-text-center  bold">APPAREL OPTIONS</h4>
+
+      <h6 class="bold">Polos & Button-Downs</h6>
+      <p>
+        No one delivers a better price or more options for your custom
+        Embroidered Corporate Work Shirts. We Know how Important it is you your
+        business to have an exceptionally embroidered logo on your business
+        gear, but we also know that it is important that they feel great too. We
+        have many different polos, oxfords, & button down options to meet your
+        needs & budget.
+      </p>
+      <h6 class="bold">T-Shirts</h6>
+      <p>
+        We are experts at T-Shirt Embroidery & Screen Printing. Not only do we
+        offer the most competitive price for all your T-Shirt Screen printing &
+        embroidery needs, no one offers a better selection of brands and styles
+        for your custom embroidered shirts.
+      </p>
+      <h6 class="bold">Hats</h6>
+      <p>
+        Do you need custom embroidered company or team hats and caps? We can
+        either direct embroider or create and apply a great patch to rep your
+        logo or design. WIth a great selection of styles and looks, we’ve got
+        your project covered.
+      </p>
+      <h6 class="bold">Bags</h6>
+      <p>
+        We can help create that perfect customized bag, tote, backpack, or
+        duffle, with a variety of embroidery options. Whether you are a sport
+        team, event marketing company, or just want to rock the coolest patches
+        on your backpack, let Arena help customize your best embroidered look.
+      </p>
+      <h6 class="bold">Medical Scrubs</h6>
+      <p>
+        Our embroidered lab coats and customized medical scrubs are finished
+        with a level of excellence that meets the highest standards in the
+        industry, from name & title embroidery to custom logo embroidery. Ask an
+        Area Specialist today our our great embroidery options for medical
+        scrubs and coats.
+      </p>
+    </ion-col>
+
+    <div class="divider"></div>
+
+    <ion-col size="12">
+      <h4 class="ion-text-center  bold">PREMIUM THREADS</h4>
+      <p>
+        <b>Isacord Embroidery Thread</b> is the thread of choice for maximum
+        productivity and the highest quality embroidery among the largest
+        embroidery houses. At nearly twice the strength of rayon thread, Isacord
+        Thread is the smoothest running and most reliable thread produced. It
+        has been engineered from the finest raw materials to provide just the
+        right amount of elasticity to allow for high speed running without
+        looping or puckering while virtually eliminating thread breaks.
+      </p>
+    </ion-col>
+
+    <div class="divider"></div>
+
+    <ion-col size="12">
+      <h4 class="ion-text-center  bold">NEXT STEPS</h4>
+      <p>
+        An <b>Arena Specialist</b> is waiting to help you find the right
+        <b>embroidered shirt, hat or promotional accessory</b> to help you grow
+        your brand, rep your school, or promote your team. We offer
+        personalization for businesses and brands looking for customized
+        embroidery, and we can provide
+        <b>FREE Graphic Design & Local Delivery</b> with every order. We know
+        that custom embroidered apparel is a tremendous boost to any marketing
+        strategy or event, and we are here to help you get the most from your
+        brand. Feel free ask us any questions you have about embroidery pricing
+        or screen printing, we are here to help!
+      </p>
+    </ion-col>
+
+    <ion-col
+      size="12"
+      class="ion-text-center ion-margin-bottom ion-padding-bottom"
+    >
+      <ion-button
+        [routerLink]="['/estimate']"
+        size="large"
+        class="ion-text-center text-normal"
+        >Estimate Your Project</ion-button
+      >
+    </ion-col>
+    <ion-col class="ion-text-center" size="12">
+      <p>
+        <ion-icon src="../../../assets/icons/Cloud.svg"></ion-icon>
+        Use our
+        <span
+          ><a href="javascript:;" (click)="openChat(chat)">Live Chat now</a>
+        </span>
+        to speak to a Sewing Specialist
+      </p>
+
+      <div class="divider"></div>
+
+      <p class="ion-margin-top">
+        <ion-icon src="../../../assets/icons/tel.svg"></ion-icon>
+        Or call us today at
+        <span
+          ><a href="tel:(855) 462-7362">(855) 462-7362</a> or
+          <a href="tel:tel:(855) 462-7362">(855) GO ARENA</a></span
+        >
+      </p>
+    </ion-col>
+  </ion-row>
+
+  <div class="divider ion-margin-top"></div>
+
+  <ion-row
+    class="info ion-margin-top ion-no-padding ion-margin-bottom ion-padding-bottom"
+  >
+    <ion-col size="12">
+      <my-capabilities></my-capabilities>
+    </ion-col>
+  </ion-row>
+  <my-partners></my-partners>
+
+  <my-footer></my-footer>
+
+  <my-chat #chat></my-chat>
+</ion-content>

@@ -1,0 +1,175 @@
+<ion-content>
+  <my-header></my-header>
+  <div class="title-box bg-grey">
+    <my-title [title]="title"></my-title>
+  </div>
+  <ion-row
+    class="info ion-margin-top ion-no-padding ion-margin-bottom ion-padding-bottom"
+  >
+    <ion-col size="12" class="ion-margin-bottom ion-padding-bottom">
+      <p>
+        An <b></b> is waiting to help you find the right
+        <b>embroidered shirt, hat or promotional accessory</b> to help you grow
+        your brand, rep your school, or promote your team. Feel free ask us any
+        questions you have about embroidery pricing or screen printing, we are
+        here to help. <b>Thank you for choosing Arena!</b>
+      </p>
+    </ion-col>
+    <ion-col
+      size="12"
+      class="ion-text-center ion-margin-bottom ion-padding-bottom"
+    >
+      <ion-button
+        [routerLink]="['/estimate']"
+        size="large"
+        class="ion-text-center text-normal"
+        >Get Patch Quote</ion-button
+      >
+    </ion-col>
+    <ion-col class="ion-text-center" size="12">
+      <p>
+        <ion-icon src="../../../assets/icons/Cloud.svg"></ion-icon>
+        Use our
+        <span
+          ><a href="javascript:;" (click)="openChat(chat)">Live Chat now</a>
+        </span>
+        to speak to a Sewing Specialist
+      </p>
+
+      <div class="divider"></div>
+
+      <p class="ion-margin-top">
+        <ion-icon src="../../../assets/icons/tel.svg"></ion-icon>
+        Or call us today at
+        <span
+          ><a href="tel:(855) 462-7362">(855) 462-7362</a> or
+          <a href="tel:tel:(855) 462-7362">(855) GO ARENA</a></span
+        >
+      </p>
+    </ion-col>
+  </ion-row>
+
+  <div class="divider"></div>
+
+  <ion-row
+    class="info ion-margin-top ion-no-padding ion-margin-bottom ion-padding-bottom"
+  >
+    <ion-col size="12" class="ion-margin-bottom ion-padding-bottom">
+      <div class="button-box">
+        <div class="box">
+          <button
+            type="button"
+            (click)="isActive = false"
+            [ngClass]="{
+            'box-btn-active': !isActive,
+            'box-btn': isActive
+            }"
+            class="border-radius-left"
+          >
+            <span class="span-btn">Embroidered Apparel</span></button
+          ><button
+            type="button"
+            (click)="isActive = true"
+            [ngClass]="{
+              'box-btn-active': isActive,  
+             'box-btn': !isActive
+            }"
+            class="border-radius-right"
+          >
+            <span class="span-btn">Embroidered Patches</span>
+          </button>
+        </div>
+      </div>
+    </ion-col>
+    <ion-col size="12">
+      <form [formGroup]="form" (ngSubmit)="onSubmit(form)">
+        <div class="form-group">
+          <ion-label class="form-label"
+            >Describe Your Project (Optional)</ion-label
+          >
+
+          <textarea
+            name="project"
+            id="project"
+            rows="6"
+            cols="50"
+            formControlName="project"
+            [placeholder]="!isActive ? placeholder : placeholder2"
+            class="form-textarea"
+          ></textarea>
+
+          <ion-button
+            size="large"
+            expand="block"
+            class="ion-text-center file-button text-normal"
+            >Upload Images</ion-button
+          >
+        </div>
+        <div class="form-group">
+          <ion-label class="form-label"
+            >{{ isActive ? label : 'Quantity (Optional)' }}</ion-label
+          >
+          <input
+            type="number"
+            class="form-number"
+            min="1"
+            formControlName="quantity"
+            class="form-number"
+          />
+          <div class="plus" (click)="plus()">
+            <ion-icon class="int" src="assets/icons/+.svg"></ion-icon>
+          </div>
+          <div class="minus" (click)="minus()">
+            <ion-icon class="int" src="assets/icons/-.svg"></ion-icon>
+          </div>
+        </div>
+        <div class="form-group">
+          <ion-label class="form-label"
+            >Your Name or Company Name: <span class="red">*</span></ion-label
+          >
+
+          <input type="text" formControlName="name" class="form-input" />
+          <p class="invalid" *ngIf="name.invalid && submitted">
+            <b>Required</b>
+          </p>
+        </div>
+        <div class="form-group">
+          <ion-label class="form-label"
+            >Your Email: <span class="red">*</span></ion-label
+          >
+          <input
+            type="text"
+            formControlName="email"
+            class="form-input"
+            pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{1,}[.]{1}[a-zA-Z]{2,}"
+          />
+          <p class="invalid" *ngIf="email.invalid && submitted">
+            <b>Required</b>
+          </p>
+        </div>
+        <div class="form-group">
+          <ion-label class="form-label">Phone: (Optional)</ion-label>
+          <input type="text" formControlName="phone" class="form-input" />
+        </div>
+
+        <div class="form-group ">
+          <ion-button
+            type="submit"
+            expand="block"
+            size="large"
+            class="ion-text-center ion-margin-top text-normal"
+            >Send Your Request</ion-button
+          >
+        </div>
+      </form>
+    </ion-col>
+  </ion-row>
+
+  <my-capabilities></my-capabilities>
+
+  <my-partners></my-partners>
+
+  <my-footer></my-footer>
+
+  <my-chat #chat></my-chat>
+</ion-content>

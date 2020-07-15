@@ -1,0 +1,198 @@
+<ion-content>
+  <my-header></my-header>
+  <carousel
+    [itemsPerSlide]="itemsPerSlide"
+    [singleSlideOffset]="singleSlideOffset"
+    [interval]="3000"
+    [showIndicators]="false"
+  >
+    <slide *ngFor="let slide of slides; let index=index">
+      <img
+        [src]="slide.image"
+        alt="image slide"
+        style="display: block; width: 100%;"
+      />
+    </slide>
+  </carousel>
+
+  <div class="title-box">
+    <my-title [title]="title"></my-title>
+  </div>
+  <ion-row
+    class="info ion-margin-top ion-no-padding ion-margin-bottom ion-padding-bottom"
+  >
+    <ion-col size="12" class="ion-margin-bottom ion-padding-bottom">
+      <p>
+        <b>Arena Embroidery</b> offers the highest quality embroidered patches
+        in the business. It's our passion to bring your logo or brand to life
+        with an expertly crafted custom patch. We design and embroider high
+        quality custom patches of all shapes, colors, and sizes at the best
+        prices.
+      </p>
+
+      <p>
+        An <b>Arena Specialist</b> is waiting to help you find the right
+        <b>embroidered patch option or promotional accessory</b> to help display
+        your logo, grow your brand, rep your school, or promote your team. We
+        offer personalization for businesses and brands looking for customized
+        embroidery, and we can provide <b>FREE Graphic Design</b> with every
+        order. We know that custom embroidered patches are a tremendous boost to
+        any marketing strategy or event, and we are here to help you get the
+        most from your brand.
+      </p>
+    </ion-col>
+    <ion-col
+      size="12"
+      class="ion-text-center ion-margin-bottom ion-padding-bottom"
+    >
+      <ion-button
+        [routerLink]="['/estimate']"
+        size="large"
+        class="ion-text-center text-normal"
+        >Get Patch Quote</ion-button
+      >
+    </ion-col>
+    <ion-col class="ion-text-center" size="12">
+      <p>
+        <ion-icon src="../../../assets/icons/Cloud.svg"></ion-icon>
+        Use our
+        <span
+          ><a href="javascript:;" (click)="openChat(chat)">Live Chat now</a>
+        </span>
+        to speak to a Sewing Specialist
+      </p>
+
+      <div class="divider"></div>
+
+      <p class="ion-margin-top">
+        <ion-icon src="../../../assets/icons/tel.svg"></ion-icon>
+        Or call us today at
+        <span
+          ><a href="tel:(855) 462-7362">(855) 462-7362</a> or
+          <a href="tel:tel:(855) 462-7362">(855) GO ARENA</a></span
+        >
+      </p>
+    </ion-col>
+  </ion-row>
+
+  <div class="divider"></div>
+
+  <ion-row
+    class="info ion-margin-top ion-no-padding ion-margin-bottom ion-padding-bottom"
+  >
+    <ion-col size="12" class="ion-margin-bottom ion-padding-bottom">
+      <h4 class="ion-text-center  bold">PREMIUM THREADS</h4>
+
+      <p>
+        <b>Isacord Embroidery Thread</b> is the thread of choice for maximum
+        productivity and the highest quality embroidery among the largest
+        embroidery houses. At nearly twice the strength of rayon thread, Isacord
+        Thread is the smoothest running and most reliable thread produced. It
+        has been engineered from the finest raw materials to provide just the
+        right amount of elasticity to allow for high speed running without
+        looping or puckering while virtually eliminating thread breaks.
+      </p>
+    </ion-col>
+
+    <div class="divider"></div>
+
+    <ion-col size="12">
+      <p>
+        How an embroidered patch is applied to apparel and other soft good
+        products is equally important as the patch design itself.
+      </p>
+
+      <h6 class="bold">No Backing</h6>
+      <p>
+        This option is ideal for patches that are temporarily being worn on a
+        garment. A patch with no backing is normally affixed to garments using
+        safety pins.
+      </p>
+
+      <h6 class="bold">Pvc Backing</h6>
+      <p>
+        This option is ideal for sewn-on patches. PVC backing adds structural
+        support to the patch and does not have iron-on capabilities.
+      </p>
+      <h6 class="bold">Iron-on Backing</h6>
+      <p>
+        Iron-on backing is the best option if you intend to permanently secure
+        your patch to one single garment.
+      </p>
+      <h6 class="bold">Peel & Stick Backing</h6>
+      <p>
+        This option eliminates the need to sew-on or iron-on patches to apparel,
+        hats, and bags. The sticky adhesive material on the back of the patch
+        keeps it in place. This option is not permanent.
+      </p>
+      <h6 class="bold">Hook & Loop Velcro Backing</h6>
+      <p>
+        If your patch is designed to be worn on multiple garments or switched
+        out for other patches worn on the same garment, hook and loop velcro is
+        a popular option. Velcro backing is durable and can be used over and
+        over again without damaging the patch.
+      </p>
+    </ion-col>
+
+    <div class="divider"></div>
+
+    <ion-col size="12">
+      <h4 class="bold ion-text-center">TWILL OPTIONS</h4>
+      <p>
+        Twill backing is a smooth polyester fabric that works as the background
+        of your embroidered patch design. Twill is an economical alternative to
+        embroidering the background fills that surround your patch design while
+        creating a perfect contrast with the high quality threads we use. Twill
+        backing is tight and solid and ensures your embroidered image stands out
+        crisp and clear. Arena offers over 30 twill background color options.
+      </p>
+    </ion-col>
+
+    <div class="divider"></div>
+
+    <ion-col
+      size="12"
+      class="ion-text-center ion-margin-bottom ion-padding-bottom"
+    >
+      <ion-button size="large" class="ion-text-center text-normal"
+        >Get Started</ion-button
+      >
+    </ion-col>
+    <ion-col class="ion-text-center" size="12">
+      <p>
+        <ion-icon src="../../../assets/icons/Cloud.svg"></ion-icon>
+        Use our
+        <span
+          ><a href="javascript:;" (click)="openChat(chat)">Live Chat now</a>
+        </span>
+        to speak to a Sewing Specialist
+      </p>
+
+      <div class="divider"></div>
+
+      <p class="ion-margin-top">
+        <ion-icon src="../../../assets/icons/tel.svg"></ion-icon>
+        Or call us today at
+        <span
+          ><a href="tel:(855) 462-7362">(855) 462-7362</a> or
+          <a href="tel:tel:(855) 462-7362">(855) GO ARENA</a></span
+        >
+      </p>
+    </ion-col>
+  </ion-row>
+
+  <div class="divider ion-margin-top"></div>
+
+  <ion-row
+    class="info ion-margin-top ion-no-padding ion-margin-bottom ion-padding-bottom"
+  >
+    <ion-col size="12">
+      <my-capabilities></my-capabilities>
+    </ion-col>
+  </ion-row>
+  <my-partners></my-partners>
+
+  <my-footer></my-footer>
+
+  <my-chat #chat></my-chat>
+</ion-content>
